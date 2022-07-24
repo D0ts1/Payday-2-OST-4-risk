@@ -1,0 +1,170 @@
+<?xml version = "1.0"?>
+<settings>
+    <!-- Master volume for all music. Decimal between 0 and 1 -->
+    <volume>0.5</volume>
+
+    <!-- Should music loop? If not true, then another song is selected from scene matches -->
+    <loop>true</loop>
+
+    <!-- To have this plugin scan a different directory for music files,
+        Uncomment <music-path> below (remove <!- - and - -> from the line below) -->
+
+    <!-- <music-path>C:\Users\YourName\Music\SomeMusicFolder</music-path> -->
+
+    <!--
+        Here is where you define what songs are used in which scenes and if they are
+        "boss" music (played during teleporter events or not).
+
+        *****  If you just want to play with RoR1 music, you just need to make sure  *****
+        *****  your music filenames match EXACTLY with all name="" attributes below. *****
+
+        Here is an example of a file that will play on the title screen and other main menus:
+
+        <song
+            name="01 Risk of Rain.mp3"
+            scenes="title,lobby,logbook,crystalworld,eclipseworld"
+            boss="false"
+            volume="1"
+        />
+
+        "name" must match the file name exactly. Supported extensions are ".mp3" and ".wav" (case sensitive).
+
+        "scenes" are the comma separated scene IDs (or levels) that will have a chance to play this music.
+        See README.md for more info on scene IDs.
+
+        "boss" is if this music plays during a teleporter event or not (or during the final boss).
+        It's important to understand that when boss is true, the music ONLY plays during teleporter events
+        and when boss is false, the music ONLY plays when *NOT* during a teleporter event.
+
+        If you want music to play regardless of the teleporter charging, you must make two <song> definitions
+        with the same data but with one boss="true" and the other boss="false"
+
+        "volume" is a local volume decimal (between 0 and 1) that gets multiplied with the global volume tag.
+
+        You can have multiple <song> definitions with the same or similar data. If a scene matches multiple <song>'s
+        then this plugin will choose one randomly. If NO matches are found, then the plugin will choose a random
+        sound file it found in the plugin folder.
+    -->
+    <music>
+        <song
+            name="Mayhem.mp3"
+            scenes="splash,intro,title,lobby,logbook,bazaar,crystalworld,eclipseworld"
+            boss="false"
+            volume="1"
+        />
+        <song
+            name="DonAcDum.mp3"
+            scenes="blackbeach,golemplains,goolake,foggyswamp"
+            boss="true"
+            volume="1"
+        />
+        <song
+            name="Breach.mp3"
+            scenes="dampcavesimple"
+            boss="false"
+            volume="1"
+        />
+        <song
+            name="HomeInvasion.mp3"
+            scenes="blackbeach,golemplains"
+            boss="false"
+            volume="1"
+        />
+        <song
+            name="DeathRow.mp3"
+            scenes="foggyswamp,shipgraveyard,arena"
+            boss="false"
+            volume="1"
+        />
+        <song
+            name="Pimped.mp3"
+            scenes="outro"
+            boss="false"
+            volume="1"
+        />
+        <song
+            name="Pimped.mp3"
+            scenes="mysteryspace"
+            boss="false"
+            volume="0"
+        />
+        <song
+            name="OdeToGreed.mp3"
+            scenes="goldshores"
+            boss="true"
+            volume="1"
+        />
+        <song
+            name="HotPursuit.mp3"
+            scenes="frozenwall,wispgraveyard,dampcavesimple,shipgraveyard"
+            boss="true"
+            volume="1"
+        />
+        <song
+            name="FuseBox.mp3"
+            scenes="goolake,wispgraveyard"
+            boss="false"
+            volume="1"
+        />
+        <song
+            name="Gauntlet.mp3"
+            scenes="foggyswamp,goolake,wispgraveyard,frozenwall,skymeadow"
+            boss="true"
+            volume="1"
+        />
+        <song
+            name="Razormind.mp3"
+            scenes="blackbeach,golemplains,frozenwall"
+            boss="false"
+            volume="1"
+        />
+        <song
+            name="BreakTheRules.mp3"
+            scenes="blackbeach,golemplains,goolake,foggyswamp,skymeadow"
+            boss="true"
+            volume="1"
+        />
+        <song
+            name="Wicked.mp3"
+            scenes="frozenwall,skymeadow"
+            boss="false"
+            volume="1"
+        />
+        <song
+            name="Mayhem.mp3"
+            scenes="limbo"
+            boss="false"
+            volume="1"
+        />
+        <song
+            name="GiveYouall.mp3"
+            scenes="moon"
+            boss="true"
+            volume="1"
+        />
+        <song
+            name="HotPursuit.mp3"
+            scenes="goldshores,artifactworld"
+            boss="false"
+            volume="1"
+        />
+        <song
+            name="Wicked.mp3"
+            scenes="dampcavesimple,shipgraveyard"
+            boss="true"
+            volume="1"
+        />
+        <song
+            name="OdeToGreed.mp3"
+            scenes="moon"
+            boss="false"
+            volume="1"
+        />
+        <song
+            name="17 Chanson d'Automne.mp3"
+            scenes="wispgraveyard,goolake,foggyswamp,skymeadow"
+            boss="false"
+            volume="1"
+        />
+    </music>
+</settings>
